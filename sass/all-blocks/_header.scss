@@ -1,0 +1,175 @@
+@import '../../mixins';
+.header {
+    width: 100%;
+    height: 789px;
+}
+
+.navbar {
+    padding: 22px 0;
+    &__logo {
+        &--mobile {
+            display: none;
+        }
+    }
+    @include for-tablet-only {
+        padding: 21px 0;
+        &__logo {
+            &--mobile {
+                display: none;
+            }
+        }
+    }
+    @include for-phone-only {
+        padding: 22px 0;
+        &__logo {
+            margin-left: 128px;
+            &--mobile {
+                display: block;
+            }
+        }
+    }
+    @include space-between;
+    &__left {
+        @include space-between;
+        gap: 58px;
+    }
+    &__menu {
+        @include space-between;
+        gap: 32px;
+        &--item {
+            font-family: 'Space Mono';
+            font-weight: 700;
+            font-size: 15px;
+            line-height: 25px;
+            color: #939CAA;
+        }
+        @include for-phone-only {
+            display: none;
+        }
+    }
+    &__button {
+        background: #FCB72B;
+        font-family: 'Space Mono';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 15px;
+        line-height: 25px;
+        text-align: center;
+        color: #FFFFFF;
+        padding: 14px 39px;
+        border-style: none;
+        @include for-phone-only {
+            display: none;
+        }
+    }
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    height: 700px;
+    background-image: url(../../images/hero-desktop-bg.jpg);
+    background-size: cover;
+    @include for-tablet-only {
+        background-image: url(../../images/hero-tablet-bg.jpg);
+        background-size: cover;
+    }
+    @include for-phone-only {
+        background-image: url(../../images/hero-phone-bg.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-top: 153px;
+    @include for-tablet-only {
+        margin-top: 137px;
+    }
+    @include for-phone-only {
+        margin-top: 115px;
+    }
+    &__title {
+        max-width: 500px;
+        font-family: 'Space Mono';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 56px;
+        letter-spacing: -1.5px;
+        color: #FFFFFF;
+        @include for-tablet-only {
+            text-align: center;
+            margin: auto;
+        }
+        @include for-phone-only {
+            font-size: 40px;
+            max-width: 311px;
+            margin-bottom: -24px;
+        }
+    }
+    &__main {
+        display: flex;
+        gap: 57px;
+        margin-top: 40px;
+        &--image1 {
+            position: absolute;
+            left: -13%;
+            top: 57%;
+            @include for-tablet-only {
+                display: none;
+            }
+        }
+        &--textbox {
+            margin-left: 92px;
+            @include for-tablet-only {
+                margin: auto;
+            }
+            &-title {
+                max-width: 405px;
+                font-family: 'Lexend Deca';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 15px;
+                line-height: 25px;
+                color: #FFFFFF;
+                @include for-tablet-only {
+                    max-width: 573px;
+                    text-align: center;
+                }
+                @include for-phone-only {
+                    max-width: 311px;
+                }
+            }
+        }
+        &--image2 {
+            position: absolute;
+            left: 47%;
+            top: 55%;
+            @include for-tablet-only {
+                position: absolute;
+                left: -41%;
+                top: 96%;
+            }
+            @include for-phone-only {
+                position: absolute;
+                left: -61%;
+                top: 95%;
+            }
+        }
+    }
+}
+
+.second-button {
+    margin-top: 40px;
+    @include for-tablet-only {
+        margin-left: 33%;
+    }
+    @include for-phone-only {
+        display: block;
+        margin-left: 21%;
+        margin-top: 34px;
+    }
+}

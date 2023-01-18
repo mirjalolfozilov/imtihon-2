@@ -1,0 +1,122 @@
+@import '../../mixins';
+.section-2 {
+    height: 1802px;
+    @include for-tablet-only {
+        height: 2780px;
+    }
+    @include for-phone-only {
+        height: 3000px;
+    }
+}
+
+.information {
+    position: relative;
+    &__box {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 220px;
+        margin-top: 226px;
+        @include for-tablet-only {
+            display: flex;
+            flex-direction: column-reverse;
+            margin-top: 430px;
+            margin-top: 128px;
+        }
+        &--textbox {
+            max-width: 445px;
+            @include for-tablet-only {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                max-width: 573px;
+                width: 100%;
+                margin-top: -134px;
+            }
+            @include for-phone-only {
+                max-width: 311px;
+            }
+            &---title {
+                font-family: 'Space Mono';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 48px;
+                line-height: 48px;
+                letter-spacing: -2.14286px;
+                color: #495567;
+                @include for-tablet-only {
+                    text-align: center;
+                    max-width: 490px;
+                }
+                @include for-phone-only {
+                    font-size: 32px;
+                }
+            }
+            &---text {
+                margin-top: 24px;
+                font-family: 'Lexend Deca';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 15px;
+                line-height: 25px;
+                color: #939CAA;
+                @include for-tablet-only {
+                    text-align: center;
+                }
+            }
+            &---button {
+                margin-top: 40px;
+                background: #FCB72B;
+                font-family: 'Space Mono';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 15px;
+                line-height: 25px;
+                text-align: center;
+                color: #FFFFFF;
+                border-style: none;
+                padding: 14px 43px;
+            }
+        }
+    }
+}
+
+.avatar-3 {
+    border-radius: 50%;
+}
+
+.box-2 {
+    @include for-tablet-only {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.info__direction1 {
+    position: absolute;
+    right: -17%;
+    top: 16%;
+    @include for-tablet-only {
+        position: absolute;
+        right: -6%;
+        top: 11%;
+    }
+}
+
+.info__direction2 {
+    position: absolute;
+    left: -15%;
+    top: 38%;
+}
+
+.info__direction3 {
+    position: absolute;
+    right: -17%;
+    top: 80%;
+    @include for-tablet-only {
+        position: absolute;
+        right: -6%;
+        top: 73%;
+    }
+}

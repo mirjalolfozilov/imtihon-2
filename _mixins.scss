@@ -1,0 +1,17 @@
+@mixin space-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin for-tablet-only {
+    @media (max-width: 768px) {
+        @content;
+    }
+}
+
+@mixin for-phone-only {
+    @media (max-width: 576px) {
+        @content;
+    }
+}

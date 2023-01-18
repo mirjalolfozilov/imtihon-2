@@ -1,0 +1,56 @@
+@import '../../mixins';
+footer {
+    background-color: #333A44;
+    height: 96px;
+    padding-top: 20px;
+    @include for-phone-only {
+        height: 438px;
+    }
+}
+
+.footer {
+    &__bar {
+        @include space-between;
+        padding-top: 35px;
+        @include for-phone-only {
+            display: flex;
+            flex-direction: column;
+            padding-top: 64px;
+        }
+        &--left {
+            @include space-between;
+            @include for-phone-only {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    }
+    &__menu {
+        display: flex;
+        gap: 24px;
+        margin-left: 58px;
+        @include for-phone-only {
+            display: flex;
+            flex-direction: column;
+            margin-left: 0px;
+            margin-top: 41px;
+        }
+        &--item {
+            font-family: 'Space Mono';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 15px;
+            line-height: 25px;
+            color: #939CAA;
+            text-align: center;
+        }
+    }
+}
+
+.social {
+    display: flex;
+    gap: 24px;
+    @include for-phone-only {
+        margin-top: 85px;
+    }
+}

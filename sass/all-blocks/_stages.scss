@@ -1,0 +1,86 @@
+@import '../../mixins';
+.section-1 {
+    @include for-tablet-only {
+        height: 470px;
+        margin-bottom: 245px;
+    }
+    @include for-phone-only {
+        height: 792px;
+    }
+}
+
+.stages {
+    position: relative;
+    max-width: 1110px;
+    width: 100%;
+    height: 291px;
+    margin: 160px auto;
+    display: flex;
+    gap: 30px;
+    display: flex;
+    flex-direction: row;
+    @include for-tablet-only {
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+    }
+    @include for-phone-only {
+        margin: auto;
+    }
+    &__card {
+        max-width: 350px;
+        @include for-tablet-only {
+            display: flex;
+            justify-content: center;
+            max-width: 560px;
+            margin: auto;
+        }
+        @include for-phone-only {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            &--icon {
+                width: 56px;
+                height: 56px;
+            }
+        }
+        &--textbox {
+            display: flex;
+            flex-direction: column;
+            @include for-tablet-only {
+                margin-left: 79px;
+            }
+            @include for-phone-only {
+                margin-left: 0;
+            }
+            &-title {
+                margin-top: 40px;
+                font-family: 'Space Mono';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 24px;
+                line-height: 28px;
+                letter-spacing: -1.07143px;
+                color: #495567;
+                @include for-phone-only {
+                    text-align: center;
+                    max-width: 311px;
+                }
+            }
+            &-info {
+                margin-top: 27px;
+                font-family: 'Lexend Deca';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 15px;
+                line-height: 25px;
+                color: #939CAA;
+                @include for-phone-only {
+                    text-align: center;
+                    max-width: 311px;
+                }
+            }
+        }
+    }
+}
